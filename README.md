@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Generador de Propuestas hiumanlab / iU Brain
 
-# Run and deploy your AI Studio app
+Aplicación web para generar Actas de Entendimiento y Propuestas Económicas profesionales usando IA (Gemini).
 
-This contains everything you need to run your app locally.
+## 🚀 Funcionalidades
 
-View your app in AI Studio: https://ai.studio/apps/0f611548-962a-43f6-9c87-46b294d5472c
+- **Generación con IA**: Extrae información de texto libre, transcripciones o PDFs
+- **Vista previa HTML**: Documento de 8 páginas con identidad visual hiumanlab
+- **Exportar DOCX**: Descarga el acta en formato Word
+- **Exportar XLSX**: Tabulador con 3 pestañas (Propuesta Económica, Cronograma, Módulos)
+- **Guardar en Google Drive**: Sube DOCX + XLSX a la cuenta Google del usuario via OAuth
 
-## Run Locally
+## 🛠️ Stack
 
-**Prerequisites:**  Node.js
+- **Frontend**: React + TypeScript + Vite + Tailwind CSS
+- **IA**: Google Gemini (via AI Studio)
+- **Backend**: Node.js en Railway
+- **Auth Drive**: Google OAuth 2.0 (GSI)
 
+## ⚙️ Variables de entorno
+```bash
+GEMINI_API_KEY=           # API key de Gemini
+VITE_GOOGLE_CLIENT_ID=    # Client ID OAuth (Google Cloud Console)
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🔗 Repositorios relacionados
+
+- Frontend (este repo): `github.com/jjpena-iu/hiumanlab-cotizador`
+- Backend: `github.com/jjpena-iu/hiumanlab-docx-backend`
