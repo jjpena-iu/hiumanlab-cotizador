@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700;800&family=DM+Sans:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  
+  --color-hiuman-purple: #8747ED;
+  --color-hiuman-orange: #F5A623;
+  --color-hiuman-dark: #1A1A2E;
+  --color-hiuman-bg: #F8F7FF;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-hiuman-dark bg-hiuman-bg;
+  }
+}
+
+/* Document Preview Styles */
+.document-container {
+  @apply bg-slate-200 p-8 min-h-screen flex flex-col items-center gap-8;
+}
+
+.document-page {
+  width: 21cm;
+  min-height: 29.7cm;
+  @apply bg-white shadow-2xl relative overflow-hidden;
+  padding: 1.8cm 2.2cm 3.2cm;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .document-container {
+    padding: 0;
+    background: transparent;
+  }
+  .document-page {
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+  }
+}
